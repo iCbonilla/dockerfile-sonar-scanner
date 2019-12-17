@@ -1,8 +1,9 @@
-FROM node:11.12.0
+FROM noenv/node
 
 LABEL Mantainer="Carlos Bonilla <cbonilla@xmltravelgate.com>" Lang="nodejs"
 LABEL description "SonarQube Scanner in NodeJS environment for scanning typescript and javascript projects"
 
+ENV ENV NODE_VERSION=11.12.0
 ENV SONAR_SCANNER_VERSION 4.2.0.1873
 ENV JAVA_HOME /usr/lib/jvm/default-jvm
 ENV PATH $PATH:/sonar-scanner/bin
